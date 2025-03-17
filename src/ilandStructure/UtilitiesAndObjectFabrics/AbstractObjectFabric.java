@@ -1,5 +1,7 @@
 package ilandStructure.UtilitiesAndObjectFabrics;
 
+import ilandStructure.Island;
+
 public interface AbstractObjectFabric {
-    Object generate(int... countsOfLinesAndColumns);
+    Object generate(int countsOfLines, int countOfColumns, Island island);
 }

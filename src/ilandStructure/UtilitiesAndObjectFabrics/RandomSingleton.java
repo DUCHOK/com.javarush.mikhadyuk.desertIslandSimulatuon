@@ -1,11 +1,19 @@
 package ilandStructure.UtilitiesAndObjectFabrics;
 
+
 import java.util.Random;
-
 public class RandomSingleton {
-    private final Random randomizer = new Random();
+    public static final Random randomizer = new Random();
 
-    public Random getRandomizer() {
-        return randomizer;
+    private RandomSingleton(){
+    }
+
+    public synchronized Random getRandomizer(){
+        if(randomizer != null){
+            return randomizer;
+        }
+        else{
+            throw new RuntimeException("Не найден рандомайзер");
+        }
     }
 }

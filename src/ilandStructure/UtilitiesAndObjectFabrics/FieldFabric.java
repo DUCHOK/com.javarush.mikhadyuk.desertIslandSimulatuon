@@ -1,19 +1,15 @@
 package ilandStructure.UtilitiesAndObjectFabrics;
 
-import animalClassesStructure.Animal;
+import ilandStructure.Island;
 import ilandStructure.IslandField;
-
-import java.util.ArrayList;
 
 public class FieldFabric implements AbstractObjectFabric {
 
-    public IslandField generate(int... countsOfLinesAndColumns){
+    public IslandField generate(int lineNum, int numInLine, Island creatingIsland){
         IslandField field = new IslandField();
-        ArrayList<ArrayList<Animal>> fieldFilling = new ArrayList<>();
-        FieldFiller fieldFiller = new FieldFiller();
-
-        fieldFilling = fieldFiller.generate();
-
+        field.setFieldFilling(new FieldFiller().generate(lineNum, numInLine, creatingIsland));
+        field.setNumInLine(lineNum);
+        field.setLineNum(numInLine);
         return field;
     }
 }
