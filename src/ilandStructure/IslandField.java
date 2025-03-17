@@ -1,17 +1,14 @@
 package ilandStructure;
 
-import animalClassesStructure.Animal;
+import animalClasses.animalClassesStructure.Animal;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
-
+@Getter
+@Setter
 public class IslandField {
+    private int lineNum;
+    private int numInLine;
     private ArrayList<ArrayList<Animal>> fieldFilling = new ArrayList<>();
-
-    public ArrayList<ArrayList<Animal>> getFieldFilling() {
-        return fieldFilling;
-    }
-
-    public void setFieldFilling(ArrayList<ArrayList<Animal>> fieldFilling) {
-        this.fieldFilling = fieldFilling;
-    }
 }

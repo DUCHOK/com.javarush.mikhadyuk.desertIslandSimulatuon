@@ -1,6 +1,8 @@
 package ilandStructure.UtilitiesAndObjectFabrics;
 
-import animalClassesStructure.Animal;
+import animalClasses.animalClassesStructure.Animal;
+import animalClasses.animalsOrPlantsFabrics.AbstractAnimalFabric;
+
 import java.util.ArrayList;
 
 public class FieldFiller implements AbstractObjectFabric{
@@ -8,15 +10,19 @@ public class FieldFiller implements AbstractObjectFabric{
     @Override
     public ArrayList<ArrayList<Animal>> generate(int... countsOfLinesAndColumns) {
         // должен создавать и заполнять лист заполненных листов, соответствующих всем видам животных
-        AllAnimalFabricsCollector collector = new AllAnimalFabricsCollector();
-        ArrayList<Object> allAnimalsFabrics = collector.collect();
+        ArrayList<Object> allAnimalsFabrics = new AllAnimalFabricsCollector().collect();
         for(Object animalFabric : allAnimalsFabrics){
             try{
-                new Runnable(){
+                Thread thread = new Thread(new Runnable(){
                     public void run(){
-                        for()
+                        Object anFabr = animalFabric;
+                        fieldFilling.add(((AbstractAnimalFabric) anFabr).createAnimalList());
                     }
-                }
+                });
+                thread.run();
+                thread.join();
+            }catch(InterruptedException e){
+                e.printStackTrace();
             }
         }
 
