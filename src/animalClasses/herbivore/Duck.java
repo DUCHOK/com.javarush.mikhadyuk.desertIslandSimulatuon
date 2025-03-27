@@ -13,7 +13,7 @@ import lombok.Getter;
 public class Duck extends Herbivore implements Eatable, BeEatable, Movable, Multiplyable {
     private Integer weight = 1;
     private Integer maxCount = 200;
-    private Integer maxChildCount = 7;
+    private Integer maxChildCount = 4;
     private Integer speed = 4;
     private Double satiety = 0.15;
 

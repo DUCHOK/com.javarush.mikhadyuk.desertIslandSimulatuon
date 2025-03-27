@@ -12,7 +12,7 @@ import lombok.Getter;
 public class Boa extends Carnivorous implements Eatable, BeEatable, Movable, Multiplyable {
     private Integer weight = 15;
     private Integer maxCount = 30;
-    private Integer maxChildCount = 6;
+    private Integer maxChildCount = 3;
     private Integer speed = 1;
     private Double satiety = 3.0;
 

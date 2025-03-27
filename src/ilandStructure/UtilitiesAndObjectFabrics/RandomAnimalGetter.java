@@ -10,11 +10,11 @@ public class RandomAnimalGetter {
     public Animal get(IslandField field) {
         Animal randomAnimal = null;
         if(field != null){
-            Random randomizer = RandomSingleton.randomizer;
+            Random random = new Random();
             ArrayList<Animal> randomAnimalList;
-            randomAnimalList = field.getFieldFilling().get(randomizer.nextInt(0, field.getFieldFilling().size()));
+            randomAnimalList = field.getFieldFilling().get(random.nextInt(0, field.getFieldFilling().size()));
             try {
-                randomAnimal = randomAnimalList.get(randomizer.nextInt(0, randomAnimalList.size()));
+                randomAnimal = randomAnimalList.get(random.nextInt(0, randomAnimalList.size()));
             } catch (IllegalArgumentException e) {
                 return null;
             }

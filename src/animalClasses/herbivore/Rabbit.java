@@ -17,7 +17,7 @@ import lombok.Getter;
 public class Rabbit extends Herbivore implements Eatable, BeEatable, Movable, Multiplyable {
     private Integer weight = 2;
     private Integer maxCount = 150;
-    private Integer maxChildCount = 5;
+    private Integer maxChildCount = 4;
     private Integer speed = 2;
     private Double satiety = 0.45;
 

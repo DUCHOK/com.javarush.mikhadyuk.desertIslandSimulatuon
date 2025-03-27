@@ -8,14 +8,15 @@ import ilandStructure.UtilitiesAndObjectFabrics.FieldGetter;
 import ilandStructure.UtilitiesAndObjectFabrics.RandomSingleton;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class MoveExecutor {
 
 
     public synchronized void move(Animal animal, int lineNum, int numInLine){
-        int directionNum = RandomSingleton.randomizer.nextInt(0,4);
+        int directionNum = new Random().nextInt(0,4);
         if(!(animal.getSpeed() == 0)){
-            int moveDistance = RandomSingleton.randomizer.nextInt(0, animal.getSpeed());
+            int moveDistance = new Random().nextInt(0, animal.getSpeed());
             animal.beEated();
             AnimalAdder adder = new AnimalAdder();
             adder.addAnimalToOtherField(animal, lineNum, numInLine, moveDistance, directionNum);

@@ -5,6 +5,8 @@ import ilandStructure.UtilitiesAndObjectFabrics.RandomAnimalGetter;
 import ilandStructure.UtilitiesAndObjectFabrics.RandomSingleton;
 import lombok.AllArgsConstructor;
 
+import java.util.Random;
+
 @AllArgsConstructor
 public class CanEatChecker {
     Animal animal;
@@ -20,7 +22,7 @@ public class CanEatChecker {
         }catch (NullPointerException e){
             return false;
         }
-        if(RandomSingleton.randomizer.nextInt(1, 101) <= eatingChance){
+        if(new Random().nextInt(1, 101) <= eatingChance){
             return true;
         }else{
             return false;

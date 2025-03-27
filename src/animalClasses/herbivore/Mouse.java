@@ -18,7 +18,7 @@ import lombok.Getter;
 public class Mouse extends Herbivore implements Eatable, BeEatable, Movable, Multiplyable {
     private Integer weight = 1;
     private Integer maxCount = 500;
-    private Integer maxChildCount = 7;
+    private Integer maxChildCount = 6;
     private Integer speed = 1;
     private Double satiety = 0.01;
 

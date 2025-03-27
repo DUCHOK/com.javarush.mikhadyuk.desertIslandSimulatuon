@@ -4,7 +4,6 @@ import animalClasses.animalClassesStructure.Animal;
 import ilandStructure.Island;
 import ilandStructure.IslandField;
 import ilandStructure.UtilitiesAndObjectFabrics.FieldGetter;
-import ilandStructure.UtilitiesAndObjectFabrics.FieldSetter;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
