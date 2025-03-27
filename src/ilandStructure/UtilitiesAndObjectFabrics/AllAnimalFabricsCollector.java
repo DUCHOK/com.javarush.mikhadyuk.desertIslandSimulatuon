@@ -1,8 +1,8 @@
 package ilandStructure.UtilitiesAndObjectFabrics;
 
-import animalClasses.animalsAndPlantsFabrics.carnivorousesFabrics.*;
-import animalClasses.animalsAndPlantsFabrics.herbivoresFabrics.*;
-import animalClasses.animalsAndPlantsFabrics.plantsFabrics.PlantFabric;
+import animalClassesStructure.animalsOrPlantsFabrics.carnivorousesFabrics.*;
+import animalClassesStructure.animalsOrPlantsFabrics.herbivoresFabrics.*;
+import animalClassesStructure.animalsOrPlantsFabrics.plantsFabrics.PlantFabric;
 
 import java.util.ArrayList;
 
